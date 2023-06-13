@@ -41,7 +41,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'com.github.n3o-d4rk3r'
                 artifactId = 'custombottomnav'
-                version = '1.0'
+                version = '1.1'
                 artifact(bundleReleaseAar)
             }
         }
