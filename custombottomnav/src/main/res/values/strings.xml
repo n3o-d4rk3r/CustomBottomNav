@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">custombottomnav</string>
     <string name="space_scrolling_view_behavior">bd.com.qably.custombottomnav.SpaceNavigationViewBehavior</string>
+    <string name="toast_msg">Hello World!</string>
 </resources>

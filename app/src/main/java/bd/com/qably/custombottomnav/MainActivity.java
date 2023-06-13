@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import bd.com.qably.custombottomnav.databinding.ActivityMainBinding;
+import bd.com.qably.custombottomnav.toast.Toasty;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,5 +40,25 @@ public class MainActivity extends AppCompatActivity {
         spaceNavigationView.setActiveCentreButtonIconColor(ContextCompat.getColor(this,R.color.purple_200));
         spaceNavigationView.showIconOnly();
         spaceNavigationView.setSpaceBackgroundColor(ContextCompat.getColor(this, R.color.white));
+
+        spaceNavigationView.setSpaceOnClickListener(new SpaceOnClickListener() {
+            @Override
+            public void onCentreButtonClick() {
+                Toasty.info(getApplicationContext(),getString(R.string.app_name), Toast.LENGTH_SHORT).show();
+
+                Log.d("onCentreButtonClick ", "onCentreButtonClick");
+                spaceNavigationView.shouldShowFullBadgeText(true);
+            }
+
+            @Override
+            public void onItemClick(int itemIndex, String itemName) {
+                Log.d("onItemClick ", "" + itemIndex + " " + itemName);
+            }
+
+            @Override
+            public void onItemReselected(int itemIndex, String itemName) {
+                Log.d("onItemReselected ", "" + itemIndex + " " + itemName);
+            }
+        });
     }
 }

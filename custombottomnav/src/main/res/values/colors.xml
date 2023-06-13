@@ -11,4 +11,11 @@
     <color name="badge_background_color">#f44336</color>
     <color name="white_with_alpha">#bfffffff</color>
     <color name="colorBackgroundHighlightWhite">#8dffffff</color>
+
+    <color name="defaultTextColor">#FFFFFF</color>
+    <color name="errorColor">#f44336</color>
+    <color name="infoColor">#3F51B5</color>
+    <color name="successColor">#388E3C</color>
+    <color name="warningColor">#FFA900</color>
+    <color name="normalColor">#353A3E</color>
 </resources>
